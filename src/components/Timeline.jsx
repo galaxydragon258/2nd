@@ -8,17 +8,14 @@ const timelineEvents = [
     desc: 'The moment everything changed. You agreed to be my girlfriend.',
   },
   {
-    month: 'Late May',
     title: 'Late Night Calls',
     desc: 'Hours felt like minutes. We discovered entire worlds in each other\'s voices.',
   },
   {
-    month: 'Early June',
     title: 'Wildest Month',
     desc: 'One of my favorite month, wherein we freely show each other wild version (hehe).',
   },
   {
-    month: 'June to July',
     title: 'Becoming Home',
     desc: 'I stopped looking for belonging. You are where I want to be.',
   },

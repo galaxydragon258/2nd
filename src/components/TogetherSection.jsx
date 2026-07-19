@@ -4,27 +4,24 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const photos = [
+  const photos = [
   {
-    src: '/photo-1.png',
+    image: '/image7.jpg',
     label: 'May 2026',
     tag: 'Where It All Started',
-    title: 'Matching Shirts, Matching Hearts',
-    desc: 'Our first photo together at the gym — wearing the same shirt without planning it. That\'s when I knew the universe was on our side.',
+    title: 'DATE OUTSIDE THE GYM',
   },
   {
-    src: '/photo-2.png',
+    image: '/image6.jpg',
     label: 'June 2026',
-    tag: 'Our First Adventure',
-    title: 'Walking Into the Sunset Together',
-    desc: 'The golden hour felt different with you beside me. Every step forward felt like the beginning of something that would last forever.',
+    tag: 'Cute post yarn ',
+    title:'Cute post yarn '
   },
   {
-    src: '/photo-3.png',
+    image: '/image3.jpg',
     label: 'July 2026',
-    tag: 'The Little Things',
-    title: 'Coffee Dates & Quiet Moments',
-    desc: 'It\'s not always about the big gestures. Sometimes love is two cups of coffee and your hand reaching for mine across the table.',
+    tag: 'Food Dates',
+    title: 'Food Dates',
   },
 ]
 
@@ -168,7 +165,7 @@ export default function TogetherSection() {
               ref={el => photoFrameRefs.current[i] = el}
             >
               <div className="photo-polaroid" style={{ transform: `rotate(${i % 2 === 0 ? -1.5 : 1.5}deg)` }}>
-                <img src={photo.src} alt={photo.title} loading="lazy" />
+                <img src={photo.image} alt={photo.title} loading="lazy" />
                 <span className="photo-polaroid-label">{photo.label}</span>
               </div>
 

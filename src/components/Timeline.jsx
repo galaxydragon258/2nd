@@ -3,9 +3,9 @@ import { gsap } from 'gsap'
 import { quote } from '../data/constant'
 const timelineEvents = [
   {
-    month: 'May 17, 2026',
+    month: 'May 19, 2026',
     title: 'Day One',
-    desc: 'The moment everything changed. You said yes, and I forgot how to breathe.',
+    desc: 'The moment everything changed. You agreed to be my girlfriend.',
   },
   {
     month: 'Late May',
@@ -14,16 +14,16 @@ const timelineEvents = [
   },
   {
     month: 'Early June',
-    title: 'First Adventure',
-    desc: 'Somewhere we went, everything was beautiful because you were there.',
+    title: 'Wildest Month',
+    desc: 'One of my favorite month, wherein we freely show each other wild version (hehe).',
   },
   {
-    month: 'June — July',
+    month: 'June to July',
     title: 'Becoming Home',
     desc: 'I stopped looking for belonging. You are where I want to be.',
   },
   {
-    month: 'July 17, 2026',
+    month: 'July 19, 2026',
     title: 'Two Months ♡',
     desc: 'Today. Right now. This very moment that I\'m dedicating entirely to you.',
   },

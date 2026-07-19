@@ -1,27 +1,21 @@
-import React, { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const moments = [
   {
-    emoji: '🌙',
     title: 'Our First Late-Night Call',
-    date: 'Day 01',
-    fill: 'moment-fill-1',
-    desc: 'We talked until 3am without realizing it',
+    image: '/image5.jpg'
   },
   {
-    emoji: '☕',
     title: 'The Coffee That Started It All',
-    date: 'Day 12',
-    fill: 'moment-fill-2',
-    desc: 'You laughed at my terrible joke and I was done for',
+    image: '/image6.jpg'
   },
   {
-    emoji: '🌸',
-    title: 'First Time Saying "I Love You"',
-    date: 'Day 28',
-    fill: 'moment-fill-3',
-    desc: 'The world stopped and only you existed',
+    title: 'First Time Kumain sa lanas"',
+    image: '/image7.jpg'
   },
 ]
 
@@ -31,52 +25,33 @@ export default function MomentsSection() {
   const eyebrowRef = useRef(null)
   const cardsRef = useRef([])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Heading reveal
       gsap.from(eyebrowRef.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        ease: 'expo.out',
-        scrollTrigger: {
-          trigger: eyebrowRef.current,
-          start: 'top 85%',
-        },
+        opacity: 0, y: 20, duration: 0.8, ease: 'expo.out',
+        scrollTrigger: { trigger: eyebrowRef.current, start: 'top 85%' },
       })
 
       gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 60,
-        duration: 1.2,
-        ease: 'expo.out',
-        scrollTrigger: {
-          trigger: headingRef.current,
-          start: 'top 85%',
-        },
+        opacity: 0, y: 60, duration: 1.2, ease: 'expo.out',
+        scrollTrigger: { trigger: headingRef.current, start: 'top 85%' },
       })
 
-      // Cards stagger with skew
       cardsRef.current.forEach((card, i) => {
         if (!card) return
+
         gsap.from(card, {
-          opacity: 0,
-          y: 80,
-          skewY: 3,
-          duration: 1,
-          ease: 'expo.out',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top 88%',
-          },
-          delay: i * 0.15,
+          opacity: 0, y: 80, skewY: 3, duration: 1, ease: 'expo.out',
+          scrollTrigger: { trigger: card, start: 'top 88%' },
+          delay: i * 0.1,
         })
 
-        // Parallax on each card's bg
-        const bg = card.querySelector('.moment-bg-div')
+        // parallax on image
+        const bg = card.querySelector('.moment-bg')
         if (bg) {
           gsap.to(bg, {
             yPercent: -20,
+            scale: 1.1,
             ease: 'none',
             scrollTrigger: {
               trigger: card,
@@ -103,15 +78,17 @@ export default function MomentsSection() {
             key={i}
             className="moment-card"
             ref={el => cardsRef.current[i] = el}
-            role="img"
-            aria-label={m.title}
           >
-            <div
-              className={`moment-bg-div ${m.fill}`}
-              style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
-            />
+            {/* DYNAMIC IMAGE */}
+            <div className="moment-bg-wrap">
+              <img
+                className="moment-bg"
+                src={m.image}
+                ></img>
+              <div className="moment-bg-overlay" />
+            </div>
+
             <div className="moment-card-inner">
-              <div className="moment-emoji" aria-hidden="true">{m.emoji}</div>
               <h3 className="moment-title">{m.title}</h3>
               <p className="moment-date-tag">{m.date}</p>
             </div>

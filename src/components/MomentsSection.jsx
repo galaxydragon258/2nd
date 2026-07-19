@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const moments = [
   {
-    title: 'Our First Late-Night Call',
+    title: 'Our First gala outside(illegals)',
     image: '/image5.jpg'
   },
   {

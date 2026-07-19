@@ -7,19 +7,16 @@ gsap.registerPlugin(ScrollTrigger)
   const photos = [
   {
     image: '/image7.jpg',
-    label: 'March 2026',
     tag: 'Illegals momints',
     title: 'DATE OUTSIDE THE GYM',
   },
   {
     image: '/image6.jpg',
-    label: 'July 2026',
     tag: 'Cute post yarn ',
     title:'Cute post yarn '
   },
   {
     image: '/image3.jpg',
-    label: 'July 2026',
     tag: 'Food Dates',
     title: 'Food Dates',
   },

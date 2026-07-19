@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
   {
     image: '/image7.jpg',
     label: 'March 2026',
-    tag: 'Where It All Started',
+    tag: 'Illegals momints',
     title: 'DATE OUTSIDE THE GYM',
   },
   {

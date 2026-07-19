@@ -46,7 +46,7 @@ export default function Hero({ elapsed }) {
       <div className="hero-bg" ref={bgRef} />
       <div className="hero-vignette" />
 
-      <div ref={dateRef} className="hero-date">May 19, 2026 — 2nd Monthsary</div>
+      <div ref={dateRef} className="hero-date">July 19, 2026 — 2nd Monthsary</div>
 
       <h1 className="hero-title">
         <span className="line">

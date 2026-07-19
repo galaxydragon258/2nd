@@ -10,7 +10,7 @@ const moments = [
     image: '/image5.jpg'
   },
   {
-    title: 'The Coffee That Started It All',
+    title: 'Bored yarn?',
     image: '/image6.jpg'
   },
   {
